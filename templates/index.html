@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Edinburgh House Price Prediction</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+  <h1>Estimate price of property in Edinburgh:</h1>
+    <div class="container">
+      <form action="{{ url_for('predict')}}" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <input type="number" id="bedrooms" name="bedrooms" min="1" max="10" placeholder="Bedrooms" class="form-control" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <input type="number" id="bathrooms" name="bathrooms" min="0" max="5" placeholder="Bathrooms" class="form-control" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <input type="number" id="other_rooms" name="other_rooms" min="0" max="5" placeholder="Other rooms" class="form-control" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <input list="postcode" name="postcode" placeholder="Postcode" class="form-control" required />
+              <datalist id="postcode">
+                  <option value="EH1">
+                  <option value="EH2">
+                  <option value="EH3">
+                  <option value="EH4">
+                  <option value="EH5">
+                  <option value="EH6">
+                  <option value="EH7">
+                  <option value="EH8">
+                  <option value="EH9">
+                  <option value="EH10">
+                  <option value="EH11">
+                  <option value="EH12">
+                  <option value="EH13">
+                  <option value="EH14">
+                  <option value="EH15">
+                  <option value="EH16">
+                  <option value="EH17">
+                  <option value="EH21">
+                  <option value="EH29">
+                  <option value="EH30">
+                  <option value="EH52">
+              </datalist>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-4">
+            <button type="submit" name="my_data" class="btn btn-primary btn-lg">Estimate house price</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+</body>
+</html>
