@@ -1,10 +1,10 @@
-This tool will help with evaluating your house price in Edinburgh. by comapring it with other houses on the market.
+# This web app helps with evaluating a house price in Edinburgh. Model was built using statsmodels by scraping Zoopla's data.
 
-Done:
-Scrape multiple websites
-Clean the data
-Make a regression model
+Zoopla.py is my scraper.
 
-TODO:
-Make the model more accurate
-Make flask app to make it more user friendly.
+Model_summary.jpg shows the model evaluation.
+
+model.py is my trained model that I pickle and then use in my Flask app.
+
+app.py is my Flask app with the model API.
+
