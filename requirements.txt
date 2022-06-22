@@ -6,7 +6,7 @@ distlib==0.3.0
 filelock==3.0.12
 html5lib==1.0.1
 idna==2.9
-numpy==1.18.1
+numpy==1.22.0
 requests==2.23.0
 selenium==3.141.0
 six==1.14.0
